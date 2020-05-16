@@ -37,13 +37,39 @@ $ cat package.json
 
 ### tsconfig.json
 
+[tsconfig.jsonの全オプションを理解する（随時追加中）](https://qiita.com/ryokkkke/items/390647a7c26933940470)
+
 ```json
 {
   "compilerOptions": {
     "sourceMap": true,
-    "target": "es5",
-    "module": "commonjs",
+    "allowSyntheticDefaultImports": true,
+    "target": "es2020",
+    "module": "es2020",
     "outDir": "dist"
   }
 }
+```
+
+### koa導入
+
+```bash
+$ npm install --save koa @koa/router
+$ npm install --save-dev @types/node @types/koa @types/koa__router
+...
+```
+
+### ビルド＆実行
+
+- `http://localhost:8080/`で`{}`が出力される
+
+```bash
+$ npm run build && npm start
+
+> try_node_koa2@1.0.0 build $HOME/git_repos/try_node_koa2
+> tsc -p tsconfig.json
+
+
+> try_node_koa2@1.0.0 start $HOME/git_repos/try_node_koa2
+> node dist/main.js
 ```
