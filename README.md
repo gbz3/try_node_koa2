@@ -43,9 +43,10 @@ $ cat package.json
 {
   "compilerOptions": {
     "sourceMap": true,
+    "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "target": "es2020",
-    "module": "es2020",
+    "module": "commonjs",
     "outDir": "dist"
   }
 }

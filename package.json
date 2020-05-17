@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "## 環境設定",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc -p tsconfig.json",
@@ -34,6 +33,7 @@
     "js-yaml": "^3.13.1",
     "koa": "^2.11.0",
     "koa-views": "^6.2.2",
+    "log4js": "^6.2.1",
     "pug": "^2.0.4"
   }
 }
