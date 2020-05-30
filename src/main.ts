@@ -10,7 +10,6 @@ const logger = Logger.getNoServeLogger()
 const config = JsYaml.safeLoad(Fs.readFileSync('config.yaml', { encoding: 'utf-8' }))
 const app = new Koa()
 
-app.use(Logger.useServeLogger())  // ctx.logger でログ出力メソッドが利用可能
 app.use(views(`${__dirname}/../views`, { autoRender: true, extension: 'pug' }))
 app.use(Router.useRouter())
 
